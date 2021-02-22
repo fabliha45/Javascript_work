@@ -5,6 +5,7 @@ d3.csv('../data/squirrelActivities.csv', d3.autoType)
  //constants helps us to look back for references for same values
  const width = window.innerWidth *.8;
  const height = window.innerHeight /2.5;
+
  const margins = { top: 20, bottom: 30, left: 20, right: 30 };
  
 
