@@ -1,8 +1,8 @@
 /* CONSTANTS AND GLOBALS */
-const width = window.innerWidth * 0.7,
+const width = window.innerWidth * 0.9,
   height = window.innerHeight * 0.7,
-  margin = { top: 20, bottom: 60, left: 60, right: 40 },
-  radius = 5;
+  margin = { top: 20, bottom: 60, left: 150, right: 40 },
+  radius = 6;
 
 // these variables allow us to access anything we manipulate in init() but need access to in draw().
 // All these variables are empty before we assign something to them.
@@ -29,11 +29,11 @@ d3.csv("../data/Heart_failure_records.csv", d3.autoType).then(Heart_data => {
 function init() {
   // + DEFINE SCALES
     xScale = d3.scaleLinear()
-      .domain(d3.extent(state.data, d => d.Age))
+      .domain(d3.extent(state.data, d => d.age))
       .range([margin.left, width - margin.right])
 
     yScale = d3.scaleLinear()
-      .domain(d3.extent(state.data, d => d.BMI)) // [min, max]
+      .domain(d3.extent(state.data, d => d.Death_Event)) // [min, max]
       .range([height - margin.bottom, margin.bottom])
 
   // + DEFINE AXES
@@ -46,8 +46,8 @@ function init() {
     dropdown.selectAll("option")
       .data([
         { key: "All", label: "All"},
-        { key: "0", label: "Not Diabetic"},
-        { key: "1", label: "Diabetic"}])
+        { key: "0", label: "Female"},
+        { key: "1", label: "Male"}])
       .join("option")
       .attr("value", d => d.key) // set the key to the 'value' -- what we will use to FILTER our data later
       .text(d => d.label); // set the label to text -- easier for the user to read than the key
@@ -76,7 +76,7 @@ function init() {
       .append("text") // add xAxis label
         .attr("font-size", "17")
         .attr("transform", `translate(${width / 2}, ${40})`)
-        .attr("fill", "red")
+        .attr("fill", "Blue")
         .text("Age")
     
    svg.append("g")
@@ -86,8 +86,8 @@ function init() {
     .append("text") // add yAxis label
       .attr("font-size", "17")
       .attr("transform", `translate(${-35}, ${height / 2})`)
-      .attr("fill", "red")
-      .text("BMI")
+      .attr("fill", "Blue")
+      .text("Death_Count")
 
     draw(); // calls the draw function
 
@@ -101,25 +101,25 @@ function draw() {
   const filteredData = state.data // <--- update to filter
   .filter(d => {
     if (state.selectStatus == "All") return true
-    else return d.Diabetes == state.selectStatus
+    else return d.Gender == state.selectStatus
   })
 
   // + DRAW CIRCLES
   const dot = svg
     svg.selectAll("circle")
-    .data(filteredData, d => d.ID) // new column w unique key for that row
+    .data(filteredData, d => d.Count) // new column w unique key for that row
     .join(
       // + HANDLE ENTER SELECTION
       enter => enter.append("circle")
       .attr("r", radius)
       .attr("fill", d => {
-        if(d.Diabetes == "1") return "#df0d0d"
+        if(d.Gender == "1") return "#df0d0d"
         else return "#7dd3ba"})
-      .attr("cx", d => xScale(d.Age)) // start dots on the left
-      .attr("cy", d => yScale(d.BMI))
+      .attr("cx", d => xScale(d.age)) // start dots on the left
+      .attr("cy", d => yScale(d.Death_Event))
       .call(sel => sel.transition()
         .duration(100)
-        .attr("cx", d => xScale(d.Age)) // transition to correct position
+        .attr("cx", d => xScale(d.age)) // transition to correct position
       ),
 
       // + HANDLE UPDATE SELECTION
