@@ -17,7 +17,7 @@ let state = {
 };
 
 /* LOAD DATA */
-d3.csv("../data/Heart_failure_records.csv", d3.autoType).then(Heart_data => {
+d3.csv("../data/HeartFailureRecords.csv", d3.autoType).then(Heart_data => {
   console.log("Heart_data", Heart_data);
   state.data = Heart_data;
   init();
@@ -33,7 +33,7 @@ function init() {
       .range([margin.left, width - margin.right])
 
     yScale = d3.scaleLinear()
-      .domain(d3.extent(state.data, d => d.Death_Event)) // [min, max]
+      .domain(d3.extent(state.data, d => d.serum_creatinine)) // [min, max]
       .range([height - margin.bottom, margin.bottom])
 
   // + DEFINE AXES
@@ -87,7 +87,7 @@ function init() {
       .attr("font-size", "14")
       .attr("transform", `translate(${-35}, ${height / 2})`)
       .attr("fill", "Blue")
-      .text("Death_Count")
+      .text("serum_creatinine")
 
     draw(); // calls the draw function
 
@@ -116,7 +116,7 @@ function draw() {
         if(d.Gender == "1") return "#df0d0d"
         else return "#7dd3ba"})
       .attr("cx", d => xScale(d.age)) // start dots on the left
-      .attr("cy", d => yScale(d.Death_Event))
+      .attr("cy", d => yScale(d.serum_creatinine))
       .call(sel => sel.transition()
         .duration(100)
         .attr("cx", d => xScale(d.age)) // transition to correct position
