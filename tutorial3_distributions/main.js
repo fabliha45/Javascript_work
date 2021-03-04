@@ -18,7 +18,7 @@ let state = {
 
 /* LOAD DATA */
 d3.csv("../data/Heart_failure_records.csv", d3.autoType).then(Heart_data => {
-  console.log("data", Heart_data);
+  console.log("Heart_data", Heart_data);
   state.data = Heart_data;
   init();
 });
@@ -74,7 +74,7 @@ function init() {
       .attr("transform", `translate(${0}, ${height - margin.bottom})`) // move to the bottom
       .call(xAxis)
       .append("text") // add xAxis label
-        .attr("font-size", "17")
+        .attr("font-size", "14")
         .attr("transform", `translate(${width / 2}, ${40})`)
         .attr("fill", "Blue")
         .text("Age")
@@ -84,7 +84,7 @@ function init() {
     .attr("transform", `translate(${margin.left}, ${0})`) // align with left margin
     .call(yAxis)
     .append("text") // add yAxis label
-      .attr("font-size", "17")
+      .attr("font-size", "14")
       .attr("transform", `translate(${-35}, ${height / 2})`)
       .attr("fill", "Blue")
       .text("Death_Count")
