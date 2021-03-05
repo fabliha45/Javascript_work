@@ -1,8 +1,8 @@
 /* CONSTANTS AND GLOBALS */
 const width = window.innerWidth * 0.9,
   height = window.innerHeight * 0.7,
-  margin = { top: 20, bottom: 60, left: 150, right: 40 },
-  radius = 6;
+  margin = { top: 20, bottom: 60, left: 70, right: 40 },
+  radius = 5;
 
 // these variables allow us to access anything we manipulate in init() but need access to in draw().
 // All these variables are empty before we assign something to them.
@@ -13,7 +13,7 @@ let yScale;
 /* APPLICATION STATE */
 let state = {
   data: [],
-  selection: "All" // + YOUR FILTER SELECTION
+  selectedParty: "All" // + YOUR FILTER SELECTION
 };
 
 /* LOAD DATA */
@@ -27,7 +27,9 @@ d3.csv("../data/HeartFailureRecords.csv", d3.autoType).then(Heart_data => {
 //* INITIALIZING FUNCTION */
 // this will be run *one time* when the data finishes loading in
 function init() {
-  // + DEFINE SCALES
+  console.log('state', state)
+
+  // SCALES
     xScale = d3.scaleLinear()
       .domain(d3.extent(state.data, d => d.age))
       .range([margin.left, width - margin.right])
@@ -36,10 +38,16 @@ function init() {
       .domain(d3.extent(state.data, d => d.serum_creatinine)) // [min, max]
       .range([height - margin.bottom, margin.bottom])
 
-  // + DEFINE AXES
+  // AXES
     const xAxis = d3.axisBottom(xScale)
     const yAxis = d3.axisLeft(yScale)
 
+     // + CREATE SVG ELEMENT
+     svg = d3.select("#d3-container")
+     .append("svg")
+     .attr('width', width)
+     .attr('height', height)
+///*** */
   // + UI ELEMENT SETUP
     const dropdown = d3.select("#dropdown") // select dropdown from HTML
   // + add dropdown options
@@ -55,19 +63,15 @@ function init() {
   // + add event listener for 'change'
     dropdown.on("change", event => {
       // 'event' holds all the event information that triggered this callback
-      console.log("DROPDOWN CALLBACK: new value is", event.target.value);
+      console.log("DROPDOWN Changed", event.target.value);
       // save this new selection to application state
       state.selectedParty = event.target.value
       console.log("NEW STATE:", state);
       draw(); // re-draw the graph based on this new selection
-  });
-
-  // + CREATE SVG ELEMENT
-    svg = d3.select("#d3-container")
-      .append("svg")
-      .attr("width", width)
-      .attr("height", height)
-
+  })
+  
+      draw();
+ 
   // + CREATE AXES
     svg.append("g")
       .attr("class", "xAxis")
@@ -84,7 +88,10 @@ function init() {
     .attr("transform", `translate(${margin.left}, ${0})`) // align with left margin
     .call(yAxis)
     .append("text") // add yAxis label
+      .attr("class", 'axis-title')
       .attr("font-size", "14")
+      .attr("writing-mode", "vertical-lr")
+      .attr("text-anchor", "middle")
       .attr("transform", `translate(${-35}, ${height / 2})`)
       .attr("fill", "Blue")
       .text("serum_creatinine")
@@ -100,8 +107,8 @@ function draw() {
   // + FILTER DATA BASED ON STATE
   const filteredData = state.data // <--- update to filter
   .filter(d => {
-    if (state.selectStatus == "All") return true
-    else return d.Gender == state.selectStatus
+    if (state.selectedParty == "All") return true
+    else return d.Gender == state.selectedParty
   })
 
   // + DRAW CIRCLES
@@ -113,12 +120,13 @@ function draw() {
       enter => enter.append("circle")
       .attr("r", radius)
       .attr("fill", d => {
-        if(d.Gender == "1") return "#df0d0d"
-        else return "#7dd3ba"})
+        if(d.Gender == "1") return "red"
+        else return "Black"})
       .attr("cx", d => xScale(d.age)) // start dots on the left
+      .attr("cx", margin.left)
       .attr("cy", d => yScale(d.serum_creatinine))
-      .call(sel => sel.transition()
-        .duration(100)
+      .call(enter => enter.transition()
+        .duration(1000)
         .attr("cx", d => xScale(d.age)) // transition to correct position
       ),
 
@@ -126,19 +134,25 @@ function draw() {
       update => update
       .call(sel => sel
         .transition()
-        .duration(300)
+        .duration(250)
         .attr("r", radius * 0.5) // increase radius size
         .transition()
-        .duration(300)
+        .duration(250)
         .attr("r", radius) // bring it back to original size
       ),
 
       // + HANDLE EXIT SELECTION
       exit => exit
-        .call(sel => sel
-        .transition()
-        .duration(500)
-        .remove()
+         .attr("cy", d =>yScale(d.serum_creatinine))
+         .attr ("cx", d =>xScale(d.age))
+         .call(exit => exit
+          .transition()
+          .ease(d3.easeExpOut)
+          .style("opacity", .25)
+          .duration(500)
+          .attr("cx", width - margin.right)
+          .attr("cy", height / 2)
+          .remove()
       )
-    );
+  );
 }
