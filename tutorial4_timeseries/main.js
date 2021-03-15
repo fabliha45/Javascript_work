@@ -131,11 +131,11 @@ yScale = d3.scaleLinear()
       .join(
         enter => enter.append("g")
           .attr("class", "dot")
-          .attr("transform", d => `translate(${xScale(d.year)}, ${yScale(d.population)})`),
+          .attr("transform", d => `translate(${xScale(d.year)}, ${yScale(d.score)})`),
         update => update
           .call(update => update.transition()
             .duration(1000)
-            .attr("transform", d => `translate(${xScale(d.year)}, ${yScale(d.population)})`)
+            .attr("transform", d => `translate(${xScale(d.year)}, ${yScale(d.score)})`)
           ),
         exit => exit.remove()
       );
