@@ -2,7 +2,7 @@
 const width = window.innerWidth * 0.7,
   height = window.innerHeight * 0.7,
   margin = { top: 20, bottom: 50, left: 60, right: 60 },
-  radius = 4;
+  radius = 5;
 
 const formatBillions = (num) => d3.format(".2s")(num).replace(/G/, 'B')
 const formatDate = d3.timeFormat("%Y")
@@ -24,7 +24,7 @@ let state = {
 
 /* LOAD DATA */
 // + SET YOUR DATA PATH
-d3.csv('../data,NYSMathTestResults.csv', d=> {
+d3.csv('../data/NYSMathTestResults.csv', d=> {
   return {
     year: new Date(+d.Year, 0, 1),
     category : d.Category,

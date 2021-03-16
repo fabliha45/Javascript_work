@@ -21,8 +21,9 @@ text{
   
   .dot{
     cursor: pointer;
-    fill:rosybrown;
+    fill:rgb(26, 73, 139);
   } 
+  
   h1{
       color:rgb(24, 142, 179);
   }
