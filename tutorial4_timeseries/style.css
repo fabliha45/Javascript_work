@@ -1,5 +1,6 @@
 text{
     fill: rgb(78, 64, 201);
+    font-size: 15px;
   }
   
   .dot text{
@@ -9,6 +10,9 @@ text{
   
   .dot:hover text{
     opacity: 1;
+    font-size: 170%;
+    fill :rebeccapurple;
+    font-family: fantasy, Georgia, 'Times New Roman', Times, serif;
   }
   
   .dot:hover circle{
@@ -17,4 +21,9 @@ text{
   
   .dot{
     cursor: pointer;
+    fill:rosybrown;
+  } 
+  h1{
+      color:salmon;
   }
+  
