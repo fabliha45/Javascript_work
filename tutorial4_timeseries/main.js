@@ -27,8 +27,8 @@ let state = {
 d3.csv('../data,NYSMathTestResults.csv', d=> {
   return {
     year: new Date(+d.Year, 0, 1),
-    race : d.Category,
-    score: +d.MeanScaleScore
+    category : d.Category,
+    meanScaleScore: +d.MeanScaleScore
   }
 
 })
@@ -47,7 +47,7 @@ function init() {
    .range([margin.right, width - margin.left])
 
   yScale = d3.scaleLinear()
-   .domain(d3.extent(state.data, d => d.score))
+   .domain(d3.extent(state.data, d => d.meanScaleScore))
    .range([height - margin.bottom, margin.top])
 
   // + AXES
@@ -67,7 +67,7 @@ function init() {
         // manually add the first value
         "Select a Race",
         // add in all the unique values from the dataset
-        ...new Set(state.data.map(d => d.race))])
+        ...new Set(state.data.map(d => d.category))])
       .join("option")
       .attr("attr", d => d)
       .text(d => d)
@@ -115,10 +115,10 @@ function init() {
   function draw() {
     // + FILTER DATA BASED ON STATE
     const filteredData = state.data
-      .filter(d => d.race === state.selection)
+      .filter(d => d.category === state.selection)
   
     // + UPDATE SCALE(S), if needed
-    yScale.domain([0, d3.max(filteredData, d => d.score)])
+    yScale.domain([0, d3.max(filteredData, d => d.meanScaleScore)])
     // + UPDATE AXIS/AXES, if needed
     yAxisGroup
       .transition()
@@ -132,11 +132,11 @@ function init() {
       .join(
         enter => enter.append("g")
           .attr("class", "dot")
-          .attr("transform", d => `translate(${xScale(d.year)}, ${yScale(d.score)})`),
+          .attr("transform", d => `translate(${xScale(d.year)}, ${yScale(d.meanScaleScore)})`),
         update => update
           .call(update => update.transition()
             .duration(1000)
-            .attr("transform", d => `translate(${xScale(d.year)}, ${yScale(d.score)})`)
+            .attr("transform", d => `translate(${xScale(d.year)}, ${yScale(d.meanScaleScore)})`)
           ),
         exit => exit.remove()
       );
@@ -152,12 +152,12 @@ function init() {
       .data(d => [d]) // pass along data from parent to child
       .join("text")
       .attr("text-anchor", "end")
-      .text(d => `${formatDate(d.year)}: ${formatBillions(d.score)} `)
+      .text(d => `${formatDate(d.year)}: ${formatBillions(d.meanScaleScore)} `)
   
     // specify line generator function
     const lineGen = d3.line()
       .x(d => xScale(d.year))
-      .y(d => yScale(d.score))
+      .y(d => yScale(d.meanScaleScore))
   
     // + DRAW LINE AND/OR AREA
     svg.selectAll(".line")
