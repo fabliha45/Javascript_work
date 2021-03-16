@@ -2,7 +2,7 @@
 const width = window.innerWidth * 0.7,
   height = window.innerHeight * 0.7,
   margin = { top: 20, bottom: 50, left: 60, right: 60 },
-  radius = 5;
+  radius = 4;
 
 const formatBillions = (num) => d3.format(".2s")(num).replace(/G/, 'B')
 const formatDate = d3.timeFormat("%Y")
@@ -31,8 +31,8 @@ d3.csv("../data,NYSMathTestResults.csv", d=> {
     score: +d.Mean_Scale_Score
   }
 
-}).then(Test_score_data => {
-  console.log("Test_score_data", Test_score_data);
+}).then(data => {
+  console.log("loaded data:", data);
   state.data = Test_score_data;
   init();
 });
