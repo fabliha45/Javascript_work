@@ -1,5 +1,5 @@
 text{
-    fill: black;
+    fill: rgb(78, 64, 201);
   }
   
   .dot text{
@@ -12,7 +12,7 @@ text{
   }
   
   .dot:hover circle{
-    fill: orange;
+    fill: rgb(49, 133, 158);
   }
   
   .dot{
