@@ -27,15 +27,16 @@ let state = {
 d3.csv("../data,NYSMathTestResults.csv", d=> {
   return {
     year: new Date(+d.Year, 0, 1),
-    country : d.Category,
+    race : d.Category,
     score: +d.Mean_Scale_Score
   }
 
-}).then(data => {
-  console.log("loaded data:", data);
-  state.data = Test_score_data;
-  init();
-});
+})
+  .then(data => {
+    console.log("loaded data:", data);
+    state.data = data;
+    init();
+ });
 
 /* INITIALIZING FUNCTION */
 // this will be run *one time* when the data finishes loading in
@@ -64,9 +65,9 @@ yScale = d3.scaleLinear()
     selectElement.selectAll("option")
       .data([
         // manually add the first value
-        "Select a country",
+        "Select a Race",
         // add in all the unique values from the dataset
-        ...new Set(state.data.map(d => d.country))])
+        ...new Set(state.data.map(d => d.race))])
       .join("option")
       .attr("attr", d => d)
       .text(d => d)
@@ -114,7 +115,7 @@ yScale = d3.scaleLinear()
   function draw() {
     // + FILTER DATA BASED ON STATE
     const filteredData = state.data
-      .filter(d => d.country === state.selection)
+      .filter(d => d.race === state.selection)
   
     // + UPDATE SCALE(S), if needed
     yScale.domain([0, d3.max(filteredData, d => d.score)])
