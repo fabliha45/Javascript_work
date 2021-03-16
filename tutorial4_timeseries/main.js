@@ -24,11 +24,11 @@ let state = {
 
 /* LOAD DATA */
 // + SET YOUR DATA PATH
-d3.csv("../data,NYSMathTestResults.csv", d=> {
+d3.csv('../data,NYSMathTestResults.csv', d=> {
   return {
     year: new Date(+d.Year, 0, 1),
     race : d.Category,
-    score: +d.Mean_Scale_Score
+    score: +d.MeanScaleScore
   }
 
 })
@@ -36,19 +36,19 @@ d3.csv("../data,NYSMathTestResults.csv", d=> {
     console.log("loaded data:", data);
     state.data = data;
     init();
- });
+  });
 
 /* INITIALIZING FUNCTION */
 // this will be run *one time* when the data finishes loading in
 function init() {
   // + SCALES
   xScale = d3.scaleTime()
-  .domain(d3.extent(state.data, d => d.year))
-  .range([margin.right, width - margin.left])
+   .domain(d3.extent(state.data, d => d.year))
+   .range([margin.right, width - margin.left])
 
-yScale = d3.scaleLinear()
-  .domain(d3.extent(state.data, d => d.score))
-  .range([height - margin.bottom, margin.top])
+  yScale = d3.scaleLinear()
+   .domain(d3.extent(state.data, d => d.score))
+   .range([height - margin.bottom, margin.top])
 
   // + AXES
   const xAxis = d3.axisBottom(xScale)
