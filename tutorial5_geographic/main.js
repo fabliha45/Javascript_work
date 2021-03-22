@@ -2,7 +2,7 @@
 
 const width = window.innerWidth * 0.9,
  height = window.innerHeight * 0.7,
- margin = { top: 20, bottom: 50, left: 60, right: 40 };
+ margin = { top: 40, bottom: 50, left: 50, right: 40 };
 
 /** these variables allow us to access anything we manipulate in
 * init() but need access to in draw().
@@ -17,6 +17,7 @@ let state = {
  points: null,
  hover: {
    screenPosition: null, // will be array of [x,y] once mouse is hovered on something
+   Change95PercentDays: null,
    mapPosition: null, // will be array of [long, lat] once mouse is hovered on something
    visible: false,
  }
@@ -54,7 +55,8 @@ function init() {
    const projection = d3.geoAlbersUsa()
      .fitSize([
      width-margin.left-margin.right,
-     height-margin.top-margin.bottom], state.geojson);
+     height-margin.top-margin.bottom], 
+     state.geojson);
 
    // DEFINE PATH FUNCTION
    const path = d3.geoPath(projection)
@@ -64,17 +66,32 @@ function init() {
      .data(state.geojson.features)
      .join("path")
      .attr("class", 'states')
-     .attr("stroke", "black")
-     .attr("fill", "transparent")
+     .attr("stroke", "#1d0f50")
+     .attr("fill", "skyblue")
      .attr("d", path)
 
    // EXAPMLE #1: lat/long => x/y
+
+   svg.selectAll("circle.point")
+      .data(state.points)
+      .join("circle")
+      .attr("r", 3)
+      .attr("fill", d=> {
+        if (d.Change95PercentDays > 0) return "lilac";
+        else if (d.Change95PercentDays === 0) return "transparent"
+        else return "pink"
+      })
+      .attr("stroke", "purple")
+      .attr("transform", d=> {
+        const [x,y] = projection([d.Long, d.Lat])
+        return `translate(${x}, ${y})`
+      })
    // draw point for CUNY graduate center
    const gradCenterPoint =  { latitude: 40.7423, longitude: -73.9833 };
    svg.selectAll("circle.point")
      .data([gradCenterPoint])
      .join("circle")
-     .attr("r", 10)
+     .attr("r", 4)
      .attr("fill", "steelblue")
      .attr("transform", d=> {
        // use our projection to go from lat/long => x/y
@@ -130,10 +147,13 @@ function draw() {
    })
    .html(d=> {
      return `
-     <div>This is a sample Tooltip</div>
      <div>
-     Hovered Location: ${d.mapPosition}
+     State: ${d.stateName}</div>
+     <div>
+     Coordinates: ${d.mapPosition}
      </div>
+     <div>
+     Chnage in 95 Percent Days: ${d.Change95PercentDays}
      `
    })
 }
