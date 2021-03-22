@@ -1,0 +1,16 @@
+.leaf rect:hover{
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.tooltip{
+  pointer-events: none;
+  background-color: rgb(230, 219, 235);
+  box-shadow: 0 0 7px rgb(223, 134, 134);
+  padding: .5em;
+  border-radius: 5px;
+}
+
+.tooltip:not(.visible){
+  opacity: 0;
+}
