@@ -1,0 +1,19 @@
+.chart {
+    width: 100%; 
+    min-height: 450px;
+  }
+  .row {
+    margin:0 !important;
+  }
+  h2 {
+    background-color: black;
+    color: white;
+    font-size: 42px;
+    padding: 15px;
+  }
+  .small-heading{
+    background-color: black;
+    color: white;
+    font-size: 35px;
+    padding: 15px;
+  }
