@@ -1,0 +1,791 @@
+
+
+
+/*-----------------------------------globle css-------------------------------*/
+
+@font-face {
+    font-family: "SF-Pro-Display-Bold";
+    
+    src: url(../fonts/SF-Pro-Display-Bold.otf);
+}
+@font-face {
+    font-family: "SF-Pro-Display-Regular";
+    
+    src: url(../fonts/SF-Pro-Display-Regular.otf);
+}
+@font-face {
+    font-family: "SF-Pro-Display-Light";
+    
+    src: url(../fonts/SF-Pro-Display-Light.otf);
+}
+@font-face {
+    font-family: "SF-Pro-Display-Semibold";
+    
+    src: url(../fonts/SF-Pro-Display-Semibold.otf);
+}
+@font-face {
+    font-family: "SF-Pro-Display-Medium";
+    
+    src: url(../fonts/SF-Pro-Display-Medium.otf);
+}
+
+
+.sf-semibold{
+      font-family: "SF-Pro-Display-Semibold";
+}
+.sf-light{
+   font-family: "SF-Pro-Display-Light";
+}
+.sf-bold{
+    font-family: "SF-Pro-Display-Bold";
+}
+.sf-regular{
+      font-family: "SF-Pro-Display-Regular";
+}
+.sf-medium{
+   font-family: "SF-Pro-Display-Medium";
+}
+
+html,body{
+    overflow-x: hidden;
+           /*background: linear-gradient(180deg, #b93a3a 18%, #571717 100%);*/
+}
+.v-none{
+  visibility: hidden;
+}
+.red{
+  color: #ff0000;
+}
+a:hover {
+     color: white; 
+    text-decoration: none;
+}
+.default-btn {
+    width: 22%;
+    background: #1f73b2;
+    font-size: 22px;
+    color: rgb(184, 205, 240);
+    padding-top: 10px;
+    margin-top: 1%!important;
+    padding-bottom: 10px;
+    margin-bottom: 0%;
+    margin: auto;
+    border-radius: 7px;
+    display: block;
+    font-family: "SF-Pro-Display-Medium";
+
+}
+
+
+/*-----------------------------------header css-------------------------------*/
+.header-text {
+
+    padding-top: 15%;
+    /* padding-bottom: 1%; */
+    /* margin-right: 36px; */
+    padding-left: -94px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.header-textp{
+
+  font-size: 15px;
+        margin-top: -12px;
+        /* margin-bottom: 1rem; */
+  
+}
+header { 
+    padding-bottom: 1%;
+    background-color: #f8f8f8;
+}
+
+.icons{
+    margin-left: 0!important;
+    margin-right: 0!important;
+
+    padding-top: 26px;
+    font-size: 30px;
+    padding-left: 0!important;
+    padding-right: 0!important;
+
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+.logo {
+    /* width: 50%; */
+    display: block;
+    /* margin: auto; */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 50px;
+}
+
+.activate-tag {
+    color: #000000;
+    font-size: 29px;
+}
+.order-id {
+    font-size: 61px;
+    line-height: 60px;
+}
+/*---------------------------------page 1 css end----------------------------*/
+#page-1 {
+  /*  padding-top: 4%;*/
+    padding-bottom: 2%; 
+    text-align: center;
+    background: #f8f8f8;
+}
+.phone {
+    width: 95%;
+    margin: auto;
+    padding-bottom :10px;
+    height: 75%;
+
+}
+ 
+.hero{
+
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  padding-bottom: 1%;
+}
+.imgs{
+
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-bottom: 1%;
+}
+.underline{
+    width: 7%;
+    margin: auto;
+    background-color: brown;
+    height: 4px;
+}
+.logos {
+    padding-top: 1%;
+    padding-left: 25%;
+    padding-right: 26%;
+}
+.contentt {
+    padding-top: 10%;
+    padding-bottom: 9%;
+}
+.foot {
+    text-align: left;
+    font-size: 20px;
+    background: grey;
+}
+.loading-text-1 {
+    font-size: 18px;
+}
+.loading-text-2 {
+    font-size: 18px;
+}
+.loading-text-3 {
+    font-size: 18px;
+}
+/*-------------------------------------------page 2 css----------------------------*/
+
+#page-2 {
+   padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+    background: #cff1d7;
+}
+.loader-area {
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+.loader {
+    width: 7%;
+}
+.question-area {
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+.page-2-para p {
+    font-size: 20px;
+}
+.act-now{
+  margin-bottom: 0px;
+    padding-top: 2%;
+    color: #6b6868;
+}
+/*-----------------------------------------page-3  css------------------------------*/
+#page-3 {
+   padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+    background: #f8f8f8;
+}
+.product-area{
+  display: inline-flex;
+      width: 55%;
+      padding-top: 3%;
+}
+.product-image {
+   width: 90%;
+}
+.product-area-left{
+  width:25%;
+}
+.product-area-right{
+  width:75%;
+  text-align: left;
+  padding-top: 2%;
+}
+.product-name.mb-0 {
+    font-size: 24px;
+}
+.conform-text.mb-0 {
+    color: #464646;
+}
+.product {
+    padding-bottom: 15px;
+}
+.product-description {
+    color: black;
+}
+.recieve-number {
+    margin-top: 17px;
+}
+.confirm-btn {
+    width: 46%;
+}
+
+/*----------------------------------coment section-------------------------------*/
+.cutomer-reviw {
+    padding-top: 3%;
+    background: #f8f8f8;
+    margin-top: 1%;
+    padding-bottom: 3%;
+}
+.comment-number {
+    padding-left: 4px;
+}
+.thumb-sign {
+    width: 54%;
+}
+.smiley{
+     
+}
+.comment-section {
+    width: 80%;
+    margin: auto;
+}
+.commemt-top-line {
+    border-top: 1px solid #444141;
+    
+}
+.fb-img {
+    width: 4%;
+    margin-bottom: 4px;
+}
+.fb-imag-tag {
+    margin-top: 25px;
+    margin-bottom: 36px;
+}
+.total-comment {
+    padding-left: 5%;
+    font-size: 26px;
+    font-family:"Poppins-Medium";
+}
+.comment-dot {
+    padding-left: 2%;
+    padding-right: 2%;
+    }
+
+/*comment card css*/
+.comment-card {
+    display: inline-flex;
+        width: 100%;
+          margin-top: 0px;
+    margin-bottom: 10px;
+    position: relative; 
+}
+.comment-by {
+    color: #46639f;
+        font-family:"SF-Pro-Display-Bold";
+            font-size: 15px;
+
+}
+.comment-text{
+        font-family:"SF-Pro-Display-Medium";
+            font-size: 14px;
+}
+.comment-news{
+        font-family:"ChunkfiveEx";
+        font-size: 26px;
+}
+.comment-time{
+       padding: 5px 20px 5px 20px;
+       color: #46639f;
+       font-family:"SF-Pro-Display-Medium";
+          font-size: 12px;
+}
+.comment-img img {
+    border-radius: 50%;
+    width: 62%;
+    margin-right: 10px;
+}
+.N-t {
+
+    background: #f2f3f5;
+    padding: 5px 20px 5px 20px;
+    border-radius: 32px;
+}
+.comment-img{
+    width: 8%;
+        text-align: right;
+}
+.comment-content{
+       width: 84%;
+    position: relative;
+}
+.more-comment {
+    color: #46639f;
+    font-size: 20px;
+    font-family:"SF-Pro-Display-Medium";
+    padding-left: 91px;
+    margin-top: 13px;
+    margin-bottom: 52px;
+}
+.fa-thumbs-up{
+    background: #1d89e4;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 50%;
+}
+.user-react{
+    width: 5%;
+    box-shadow: 0px 0px 5px 3px #d7d6d7;
+    background: white;
+    border-radius: 28px;
+    padding: 2px 1px 2px 2px;
+    position: absolute;
+    top: 29%;
+    font-size: 11px;
+    right: -13px;
+  font-family: "SF-Pro-Display-Light";
+}
+.tt {
+    color: #211f1f;
+}
+ .smily {
+    font-size: 20px;
+}
+textarea {
+    width: 100%;
+    border: 1px solid #949494;
+}
+.experience-line {
+    border-top: 1px solid black;
+}
+.experience-area p {
+    margin-bottom: 6px;
+    font-size: 18px;
+    padding-left: 1%;
+}
+.experience-area h4 {
+    padding-left: 1%;
+    font-size: 26px;
+}
+.comment-btn {
+    float: right;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 18%;
+}
+.experience-area{
+  padding-bottom: 3%;
+}
+/*-----------------------------------------footer css------------------------------*/
+
+
+.footer-content {
+     padding: 2%;
+    background: #f8f8f8;
+}
+.footer-logo {
+    font-size: 16px;
+    margin-bottom: 17px;
+}
+.footer-para {
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+
+/*------------------------------media queries css---------------------------------*/
+
+
+@media screen and (min-width: 426px) {
+
+}
+@media screen and (max-width: 1600px) {
+
+}
+@media screen and (max-width: 1440px) {
+
+}
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+ .default-btn {
+    width: 46%;
+    background: #1f73b2;
+    font-size: 18px;
+    color: white;
+    padding-top: 10px;
+    margin-top: 1%!important;
+    padding-bottom: 10px;
+    margin-bottom: 0%;
+    margin: auto;
+    border-radius: 7px;
+    display: block;
+    font-family: "SF-Pro-Display-Medium";
+}
+.loader {
+    width: 12%;
+}
+.phone {
+    width: 21%;
+}
+.product-area {
+    display: inline-flex;
+    width: 82%;
+    padding-top: 3%;
+}
+.product-area-left {
+    width: 45%;
+}
+.product-area-right {
+    width: 55%;
+    text-align: left;
+    padding-top: 4%;
+}
+
+.product-image {
+    width: 62%;
+    float: right;
+}
+.confirm-btn {
+    width: 58%!important;
+} 
+.comment-section {
+    width: 96%;
+    margin: auto;
+}
+.comment-btn {
+    float: right;
+    font-size: 16px!important;
+    border-radius: 4px!important;
+    width: 24%!important;
+}
+}   
+@media screen and (max-width: 425px) {
+  header {
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    background-color: #f8f8f8;
+}
+.logo {
+    width: 20%;
+    display: block;
+    margin: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.activate-tag {
+    color: #000000;
+    font-size: 24px;
+}
+
+.order-id {
+    font-size: 55px;
+    line-height: 60px;
+}
+.phone {
+    width: 29%;
+}
+.loader-area {
+    padding-top: 6%;
+    padding-bottom: 3%;
+}
+.loader {
+    width: 22%;
+}
+.page-2-para p {
+    font-size: 18px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.act-now {
+    margin-bottom: 0px;
+    padding-top: 4%;
+    color: #6b6868;
+    font-size: 13px;
+    padding-bottom: 3%;
+}
+
+.default-btn {
+    width: 51%;
+    background: #1f73b2;
+    font-size: 18px;
+    color: white;
+    padding-top: 10px;
+    margin-top: 2%!important;
+    padding-bottom: 10px;
+    margin-bottom: 0%;
+    margin: auto;
+    border-radius: 7px;
+    display: block;
+    font-family: "SF-Pro-Display-Medium";
+}
+#page-3 {
+    padding-top: 4%;
+    padding-bottom: 15%;
+    text-align: center;
+    background: #f8f8f8;
+}
+.succssec-bold {
+    font-size: 29px;
+}
+.qualify-para {
+    font-size: 21px;
+}
+.product-area-left {
+    width: 34%;
+}
+
+.product-area-right {
+    width: 66%;
+    text-align: left;
+    padding-top: 3%;
+}
+.product-image {
+    width: 100%;
+    float: right;
+}
+.product-name.mb-0 {
+    font-size: 16px;
+}
+.conform-text.mb-0 {
+    color: #464646;
+    font-size: 11px;
+}
+.product-description {
+    color: black;
+    font-size: 12px;
+}
+.product {
+    padding-bottom: 8px;
+}
+.confirm-btn {
+    width: 82%!important;
+}
+.recieve-number {
+    margin-top: 17px;
+    font-size: 13px;
+}
+
+.footer-logo {
+    font-size: 14px;
+    margin-bottom: 13px;
+}
+.footer-para {
+    margin-bottom: 0px;
+    font-size: 7px;
+}
+.total-comment {
+    padding-left: 3%;
+    font-size: 16px;
+}
+  .comment-dot {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+.comment-news {
+    font-size: 15px;
+}
+.fb-img {
+    width: 7%;
+    margin-bottom: -5px;
+}
+.comment-img img {
+    border-radius: 50%;
+    width: 81%;
+    margin-right: 10px;
+}
+.comment-img {
+    width: 13%;
+    text-align: right;
+}
+.N-t {
+    background: #f2f3f5;
+    padding: 5px 5px 5px 16px;
+    border-radius: 32px;
+    line-height: 14px;
+}
+.more-comment {
+    color: #46639f;
+    font-size: 14px;
+    font-family: "SF-Pro-Display-Medium";
+    padding-left: 47px;
+    margin-top: 4px;
+    margin-bottom: 48px;
+}
+.comment-time {
+  
+    font-size: 10px;
+}
+.comment-text {
+   
+    font-size: 12px;
+}
+.comment-by {
+ 
+    font-size: 13px;
+}
+.user-react {
+    width: 11%;
+    top: 41%;
+}
+.comment-number {
+    padding-left: 2px;
+    font-size: 10px;
+}
+.experience-area h4 {
+    padding-left: 1%;
+    font-size: 18px;
+}
+.experience-area p {
+    margin-bottom: 6px;
+    font-size: 12px;
+    padding-left: 1%;
+}
+.cutomer-reviw {
+    padding-top: 7%;
+    background: #f8f8f8;
+    margin-top: 2%;
+    position: relative;
+    padding-bottom: 25%;
+}
+.comment-btn {
+    float: right;
+    font-size: 16px!important;
+    border-radius: 4px!important;
+    width: 41%!important;
+}
+textarea {
+    width: 100%;
+    border: 1px solid #949494;
+    height: 80px!important;
+}
+}
+@media screen and (max-width: 375px) {
+  #page-1 {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    text-align: center;
+    background: #f8f8f8;
+}
+.loader {
+    width: 19%;
+}
+.page-2-para p {
+    font-size: 18px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.default-btn {
+    width: 63%;
+    background: #1f73b2;
+    font-size: 18px;
+    color: white;
+    padding-top: 10px;
+    margin-top: 2%!important;
+    padding-bottom: 10px;
+    margin-bottom: 0%;
+    margin: auto;
+    border-radius: 7px;
+    display: block;
+    font-family: "SF-Pro-Display-Medium";
+}
+.succssec-bold {
+    font-size: 26px;
+}
+.qualify-para {
+    font-size: 19px;
+}
+.product-description {
+    color: black;
+    font-size: 10px;
+}
+.product-area {
+    display: inline-flex;
+    width: 91%;
+    padding-top: 3%;
+}
+.question-area {
+    padding-top: 2%;
+    padding-bottom: 4%;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.experience-area h4 {
+    padding-left: 1%;
+    font-size: 14px;
+}
+.comment-btn {
+    float: right;
+    font-size: 16px!important;
+    border-radius: 4px!important;
+    width: 50%!important;
+}
+.comment-section {
+    width: 94%;
+    margin: auto;
+}
+.comment-text {
+    font-size: 10px;
+}
+.comment-by {
+    font-size: 11px;
+}
+}
+@media screen and (max-width: 360px) {
+.conform-text.mb-0 {
+    color: #464646;
+    font-size: 10px;
+}
+.activate-tag {
+    color: #000000;
+    font-size: 22px;
+}
+.order-id {
+    font-size: 49px;
+    line-height: 60px;
+}
+.phone {
+    width: 36%;
+}
+.page-2-para p {
+    font-size: 16px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+ }
+@media screen and (max-width: 320px) {
+
+
+}

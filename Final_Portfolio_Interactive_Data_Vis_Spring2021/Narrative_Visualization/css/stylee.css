@@ -1,0 +1,144 @@
+
+
+
+/*-----------------------------------globle css-------------------------------*/
+
+@font-face {
+    font-family: "SF-Pro-Display-Bold";
+    
+    src: url(../fonts/SF-Pro-Display-Bold.otf);
+}
+@font-face {
+    font-family: "SF-Pro-Display-Regular";
+    
+    src: url(../fonts/SF-Pro-Display-Regular.otf);
+}
+@font-face {
+    font-family: "SF-Pro-Display-Light";
+    
+    src: url(../fonts/SF-Pro-Display-Light.otf);
+}
+@font-face {
+    font-family: "SF-Pro-Display-Semibold";
+    
+    src: url(../fonts/SF-Pro-Display-Semibold.otf);
+}
+@font-face {
+    font-family: "SF-Pro-Display-Medium";
+    
+    src: url(../fonts/SF-Pro-Display-Medium.otf);
+}
+
+
+.sf-semibold{
+      font-family: "SF-Pro-Display-Semibold";
+}
+.sf-light{
+   font-family: "SF-Pro-Display-Light";
+}
+.sf-bold{
+    font-family: "SF-Pro-Display-Bold";
+}
+.sf-regular{
+      font-family: "SF-Pro-Display-Regular";
+}
+.sf-medium{
+   font-family: "SF-Pro-Display-Medium";
+}
+
+html,body{
+    font-family: "SF-Pro-Display-Regular";
+    
+    src: url(../fonts/SF-Pro-Display-Regular.otf);
+           /*background: linear-gradient(180deg, #b93a3a 18%, #571717 100%);*/
+}
+
+.top-area{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.world-image{
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.animate__fadeIn{
+    animation-name: fadeIn;
+    animation-duration: 3s !important;
+}
+.detailed-text{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    border: 1px solid #85AAA5;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.footer-image {
+    /* border-radius: 25px; */
+    padding-top: 10px;
+    /* padding-bottom: 10px; */
+    width: 100%;
+}
+
+.headings-color{
+    color: #5cccbd;
+
+}
+.graph-section{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+select#selectline {
+    color: #85AAA5;
+}
+.graph-area{
+    width: 100%;
+    height: 550px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+        padding: 0;
+}
+
+/*------------------------------media queries css---------------------------------*/
+
+
+@media screen and (max-width: 1600px) {
+
+}
+@media screen and (max-width: 1440px) {
+
+}
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+ 
+    .detailed-text{
+        text-align: center;
+        width: 90% !important;
+        margin: auto;
+        border: 1px solid #0000a0;
+        padding: 15px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+    .graph-area {
+        width: 100%;
+        height: 250px;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 360px) {
+  
+ }
+@media screen and (max-width: 320px) {
+
+
+}
