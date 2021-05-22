@@ -11,13 +11,7 @@ Both my projects have a similar background. My main goal was to study Global War
 ## Narrative Visualization 
 Like I mentioned earlier, my projects somehow links to one another. For this project I chose the causes of Global Warming. Here there are factors shown that has an impact on our planet. For instant, all-natural causes and manmade causes. There will be a brief writing on each topic for a better understanding. Below I will link my project.
 
-## Contents
-| Project | Title | Links |
-| -- | ----- | -------- |
-| Exploratory Visualization| Deforestation| [sketch_1](https://github.com/fabliha45/Interactive-Data-Vis-Sp2021/blob/main/Project_1_Exploratory_Analysis/Initial%20Sketch.png) • [Final Version](https://fabliha45.github.io/Interactive-Data-Vis-Sp2021/Project_1_Exploratory_Analysis/index.html) |
-| Narrative Visualization| Human Vs Nature | [sketch_2](https://github.com/fabliha45/Interactive-Data-Vis-Sp2021/blob/main/Narrative_Visualization/Sketch_2.png) • [Final Version](https://fabliha45.github.io/Interactive-Data-Vis-Sp2021/Narrative_Visualization/index.html) |
 
-## Contents
 | Project | Title | Links |
 | -- | ----- | -------- |
 | Exploratory Visualization| Deforestation| [sketch_1](https://github.com/fabliha45/Interactive-Data-Vis-Sp2021/blob/main/Project_1_Exploratory_Analysis/Initial%20Sketch.png) • [Final Version](https://fabliha45.github.io/Interactive-Data-Vis-Sp2021/Final_Portfolio_Interactive_Data_Vis_Spring2021/Project_1_Exploratory_Analysis/index.html) |
