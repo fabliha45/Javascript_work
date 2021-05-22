@@ -16,3 +16,14 @@ Like I mentioned earlier, my projects somehow links to one another. For this pro
 | -- | ----- | -------- |
 | Exploratory Visualization| Deforestation| [sketch_1](https://github.com/fabliha45/Interactive-Data-Vis-Sp2021/blob/main/Project_1_Exploratory_Analysis/Initial%20Sketch.png) • [Final Version](https://fabliha45.github.io/Interactive-Data-Vis-Sp2021/Project_1_Exploratory_Analysis/index.html) |
 | Narrative Visualization| Human Vs Nature | [sketch_2](https://github.com/fabliha45/Interactive-Data-Vis-Sp2021/blob/main/Narrative_Visualization/Sketch_2.png) • [Final Version](https://fabliha45.github.io/Interactive-Data-Vis-Sp2021/Narrative_Visualization/index.html) |
+
+## Sources & Data
+
+| Dataset | Source |
+| ------- | ------ |
+| Tree Cover Loss By Region | [Climate Change](https://datahub.io/collections/climate-change)
+| Tree Cover Gain | [Global Forest Watch](https://globalforestwatch.org/)
+| Observed Land Ocean Temperatur| [Temperature Over the Year](https://data.giss.nasa.gov/)
+| Responses to Climate Forcings | [Forces affect](https://data.giss.nasa.gov/)
+| 170 Years Data Temperature | [Preindustrial Control Experience](https://data.giss.nasa.gov/)
+| Images| [Google](www.google.com/)
