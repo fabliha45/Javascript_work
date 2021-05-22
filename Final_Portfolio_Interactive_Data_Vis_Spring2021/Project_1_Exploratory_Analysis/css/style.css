@@ -1,19 +1,132 @@
 .chart {
-    width: 100%; 
+    width: 90%; 
     min-height: 450px;
   }
+.chart1{
+	
+}
   .row {
     margin:0 !important;
   }
+
+.Deforestation{
+	background-image: url("../img/bg.jpg");
+	background-size: cover;
+	background-position: center;
+ padding:40px;
+ padding-bottom: 80px;
+}
+
+.Deforestation .container{
+	background-color: #FFFFFF;
+	padding: 30px;
+	opacity: 0.9;
+}
+
+.Deforestation h2{
+	font-style: italic;
+	color: #548235;
+	font-weight: bold;
+}
+
+.Deforestation img{
+ padding-bottom: 60px;
+}
+
+.Deforestation .Bar{
+  background-color: #548235;
+  width: 15%;
+  height: 5px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.GlobalArea{
+ padding:40px;
+  border-bottom: #EEEEEE 2px solid;
+}
+
+.GlobalArea .Bar{
+  background-color: #EE1D23;
+  width: 20%;
+  height: 5px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.GlobalArea p{
+ padding-top: 30px;
+}
+
+.NextArea{
+ padding:40px;
+}
+
+.NextArea p{
+ margin-top: -20px;
+}
+
+.NextArea .Bar{
+  background-color: #548235;
+  width: 15%;
+  height: 6px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.ChartThree{
+  border-bottom: #EEEEEE 2px solid;
+}
+
+.ChartThree .Box{
+ margin-top: -150px;
+}
+
+.ChartThree .container-fluid{
+ box-shadow: 5px 5px 10px 10px #EEEEEE;
+ padding: 40px;
+ padding-top: 100px;
+}
+
+ .FormArea{
+  	background-color: #F7F7F7;
+  	padding: 50px;
+  }
+
+.FormArea .Bar{
+ background-color: #EE1D23;
+ height: 5px;
+ width: 20%;
+ margin: auto;
+ margin-bottom: 70px;
+}
+
+
+
   h2 {
-    background-color: rgb(159, 197, 221);
-    color: white;
     font-size: 42px;
     padding: 15px;
+    text-align: center;
   }
+
   .small-heading{
-    background-color: rgb(169, 153, 209);
+    background-color: #EE1D23;
     color: white;
     font-size: 35px;
     padding: 15px;
+  }
+
+  .next-heading{
+    background-color: #548235;
+    color: white;
+    font-size: 35px;
+    padding: 15px;
+  }
+
+#noAura{
+    margin-left: -200px;
+}
+
+  #chart_div{
+    margin-left: -150px;
   }
