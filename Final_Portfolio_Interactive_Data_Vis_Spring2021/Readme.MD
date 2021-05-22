@@ -16,7 +16,7 @@ Like I mentioned earlier, my projects somehow links to one another. For this pro
 | -- | ----- | -------- |
 | Exploratory Visualization| Deforestation| [sketch_1](https://github.com/fabliha45/Interactive-Data-Vis-Sp2021/blob/main/Project_1_Exploratory_Analysis/Initial%20Sketch.png) • [Final Version](https://fabliha45.github.io/Interactive-Data-Vis-Sp2021/Final_Portfolio_Interactive_Data_Vis_Spring2021/Project_1_Exploratory_Analysis/index.html) |
 | Narrative Visualization| Human Vs Nature | [sketch_2](https://github.com/fabliha45/Interactive-Data-Vis-Sp2021/blob/main/Narrative_Visualization/Sketch_2.png) • [Final Version](https://fabliha45.github.io/Interactive-Data-Vis-Sp2021/Final_Portfolio_Interactive_Data_Vis_Spring2021/Narrative_Visualization/index.html) |
-
+|Reflection|[Here](https://fabliha45.github.io/Interactive-Data-Vis-Sp2021/Final_Portfolio_Interactive_Data_Vis_Spring2021/Reflection)|
 ## Sources & Data
 
 | Dataset | Source |
