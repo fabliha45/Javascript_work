@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>PandaEats</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="#">
+  <link rel="shortcut icon" href="#">
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/dc203b3c9a.js" crossorigin="anonymous"></script>
+  <script src="script.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<!-----------------------NAVBAR-------------------------->
+	
+	<nav class="navbar navbar-expand-lg">
+	  <div class="container-fluid">
+		<a class="navbar-brand" href="index.html"><img src="img/LogoMakr-4OaHAv.png"alt="" class="logo"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <i class="fa-solid fa-bars" id="icon"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+		    <li class="nav-item">
+			  <a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="about.html">ABOUT</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="explore.html">EXPLORE</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="maps.html">MAP</a>
+			</li>
+			<li>	  
+              <input type="search" id="search" value="" onchange="ouvrirPage()" placeholder="Search">
+              <input type="button" id="button" onclick="ouvrirPage()" value="Chercher">
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	
+	
+<!-----------------------MAPS-------------------------->		
+	
+	<div class="container">
+	   <div class="row">
+		  <div class="col-md-6">
+		     <h3 id="map_h3">Campania</h3>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166645.00854488421!2d-74.34720468583001!3d40.58267091696437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b55eadafa3c5%3A0x213f1cfc2fda57a8!2sCampania!5e0!3m2!1sen!2sbd!4v1671101793353!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+		  <div class="col-md-6">
+		     <h3 id="map_h3">Tatsu Ramen</h3>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96751.9391449419!2d-74.05454278963285!3d40.729064091365224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259f46f670bf3%3A0xe87389b915537ca3!2sTatsu%20Ramen!5e0!3m2!1sen!2sbd!4v1671102092919!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+	   </div>
+	   
+	   
+	   
+	   
+	   <div class="row">
+		  <div class="col-md-6">
+		     <h3 id="map_h3">Café Rue Dix</h3>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.0211073803594!2d-73.9559512846598!3d40.67350387933612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b9e7632528b%3A0x73396b53bb1005a7!2sCafe%20Rue%20Dix!5e0!3m2!1sen!2sbd!4v1671102530873!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+		  <div class="col-md-6">
+		     <h3 id="map_h3">Tandoori Masala</h3>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.545215688576!2d-73.91431518465949!3d40.68398847933499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25d710f5bbd9f%3A0xfe8121ada53d0226!2sTandoori%20Masala%20Indian%20Cuisine!5e0!3m2!1sen!2sbd!4v1671102587525!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+	   </div>
+	         
+	  
+	   	   
+	   <div class="row">
+		  <div class="col-md-6">
+		     <h3 id="map_h3">Thai Villa</h3>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.0464018025395!2d-73.99285908465771!3d40.739004479328955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3b48fdf7d%3A0x1b80533593b46ffa!2sThai%20Villa!5e0!3m2!1sen!2sbd!4v1671102714500!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+		  <div class="col-md-6">
+		     <h3 id="map_h3">Cho Dang Gol</h3>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.535431561337!2d-73.98843468465735!3d40.750246879327825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a963364753%3A0xcf37071ffd9c5c2a!2sCho%20Dang%20Gol!5e0!3m2!1sen!2sbd!4v1671102792980!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+	   </div>
+
+	   
+	   <div class="row">
+		  <div class="col-md-6">
+		     <h3 id="map_h3">Rocca Cafe & Lounge</h3>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.1048139248232!2d-73.94303208466263!3d40.58344177934614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24479766a63f9%3A0xea67290496a9115b!2sRocca%20Cafe%20%26%20Lounge!5e0!3m2!1sen!2sbd!4v1671102882629!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+		  <div class="col-md-6">
+		     <h3 id="map_h3">Lure Fish Bar</h3>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.696240791547!2d-74.00051648465819!3d40.72470297933052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598efa832d81%3A0x32a7225f9e642e81!2sLure%20Fishbar!5e0!3m2!1sen!2sbd!4v1671102931239!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+	   </div>
+	   
+	   
+	   <div class="row">
+		  <div class="col-md-6">
+		     <h3 id="map_h3">Hill Country Barbecue</h3>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.8124972843207!2d-73.99275558465757!3d40.744151179328476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a5b6686307%3A0x56c13ad9f9afded6!2sHill%20Country%20Barbecue%20Market!5e0!3m2!1sen!2sbd!4v1671102996593!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+		  <div class="col-md-6">
+		     <h3 id="map_h3">Caracas Arepa Bar</h3>
+			 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.5946890322693!2d-73.98754398465816!3d40.72693817933028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2599d21b858bb%3A0x27e174127f55d206!2sCaracas%20Arepa%20Bar!5e0!3m2!1sen!2sbd!4v1671103054254!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+	   </div>
+	   	   
+	</div>
+	
+	
+<!-----------------------FOOTER-------------------------->		
+	
+	<footer>
+	   <div class="container">
+	      <div class="row">
+		     <div class="col-md-12">
+			    <p>|The Data is collected at the class DATA 73000| None of the Pictures belong to Me| Restaurant<span style="color:#90D1FB;">Story</span></p>
+			 </div>
+		  </div>
+	   </div>
+	</footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
