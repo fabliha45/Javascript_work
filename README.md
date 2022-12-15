@@ -12,7 +12,7 @@ Below, there is a proposal, data, code files, and suitable links that will direc
 ## Contents
 | Project | Title | Links |
 | -- | ----- | -------- |
-| JavaScript Intro| ~Restaurant Story~| [Proposal](LINK) • [Final Version](LINK) |
+| JavaScript Intro| Restaurant Story| [Proposal](LINK) • [Final Version](LINK) |
 ## Sources & Data
 
 | Dataset | Source |
